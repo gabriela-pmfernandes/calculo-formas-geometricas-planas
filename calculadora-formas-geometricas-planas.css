@@ -1,0 +1,42 @@
+body{
+    background-color: rgb(29, 28, 28);
+}
+
+h1{
+    color: rgb(19, 98, 177);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h2{
+    color: rgb(19, 98, 177);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+}
+
+h3{
+    color: rgb(136, 135, 135);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+span{
+    color: rgb(196, 194, 194);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+input{
+    border-radius: 8px;
+    border: 2px solid rgb(5, 118, 231);
+    padding: 15px;
+    font-size: large;
+    background-color: rgb(29, 28, 28);
+    color: rgb(196, 194, 194);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.btnCalcular{
+    background-color: rgb(19, 98, 177);
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    font-size: medium;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

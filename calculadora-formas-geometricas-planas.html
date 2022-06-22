@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calculadora-formas-geometricas-planas.css">
+</head>
+<body>
+    <script>
+        function calculoAreaDoQuadrado(){
+            let baseDoQuadrado = parseFloat(document.getElementById("inputBaseDoQuadradoArea").value);
+            let alturaDoQuadrado = parseFloat(document.getElementById("inputAlturaDoQuadradoArea").value);
+
+            let areaDoQuadrado = baseDoQuadrado * alturaDoQuadrado;
+            
+            document.getElementById("inputResultadoDaAreaDoQuadrado").value = areaDoQuadrado;
+        }
+
+        function calculoPerimetroDoQuadrado(){
+            let ladoDoQuadrado = parseFloat(document.getElementById("inputPerimetroDoQuadrado").value);
+
+            let perimetroDoQuadrado = ladoDoQuadrado + ladoDoQuadrado + ladoDoQuadrado + ladoDoQuadrado;
+
+            document.getElementById("inputResultadoDoPerimetroDoQuadrado").value = perimetroDoQuadrado;
+        }
+
+        function calculoAreaDoRetangulo(){
+            let baseDoRetangulo = parseFloat(document.getElementById("inputBaseDoRetanguloArea").value);
+            let alturaDoRetangulo = parseFloat(document.getElementById("inputAlturaDoRetanguloArea").value);
+
+            let areaDoRetangulo = baseDoRetangulo * alturaDoRetangulo;
+
+            document.getElementById("inputResultadoDaAreaDoRetangulo").value = areaDoRetangulo;
+        }
+
+        function calculoPerimetroDoRetangulo(){
+            let baseDoRetangulo = parseFloat(document.getElementById("inputBaseDoRetanguloPerimetro").value);
+            let alturaDoRetangulo = parseFloat(document.getElementById("inputAlturaDoRetanguloPerimetro").value);
+
+            let perimetroDoRetangulo = 2 * (baseDoRetangulo + alturaDoRetangulo);
+
+            document.getElementById("inputResultadoDoPerimetroDoRetangulo").value = perimetroDoRetangulo;
+        }
+
+        function calculoRaioDoCirculo(){
+            let diametroDoCirculo = parseFloat(document.getElementById("inputDiametroDoCirculo").value);
+
+            let raioDoCirculo = diametroDoCirculo / 2;
+
+            document.getElementById("inputResultadoDoRaioDoDiametro").value = raioDoCirculo;
+        }
+
+        function calculoAreaDoCirculo(){
+            let raioDoCirculo = parseFloat(document.getElementById("inputRaioDoCirculoArea").value);
+
+            let areaDoCirculo = (Math.PI * (raioDoCirculo ** 2));
+
+            document.getElementById("inputResultadoDaAreaDoCirculo").value = areaDoCirculo;
+        }
+
+        function calculoPerimetroDoCirculo(){
+            let raioDoCirculo = parseFloat(document.getElementById("inputRaioDoCirculoPerimetro").value);
+
+            let perimetroDoCirculo = 2 * Math.PI * raioDoCirculo;
+
+            document.getElementById("inputResultadoDoPerimetroDoCirculo").value = perimetroDoCirculo;
+        }
+
+        function calculoAreaDoTrianguloRetangulo(){
+            let baseDoTrianguloRetangulo = parseFloat(document.getElementById("inputBaseDoTrianguloRetanguloArea").value);
+            let alturaDoTrianguloRetangulo = parseFloat(document.getElementById("inputAlturaDoTrianguloRetanguloArea").value);
+
+            let areaDoTrianguloRetangulo = (baseDoTrianguloRetangulo * alturaDoTrianguloRetangulo) / 2;
+
+            document.getElementById("inputResultadoDaAreaDoTrianguloRetangulo").value= areaDoTrianguloRetangulo;
+        }
+
+        function calculoHipotenusaDoTrianguloRetangulo(){
+            let baseDoTrianguloRetangulo = parseFloat(document.getElementById("inputBaseDoTrianguloRetanguloHipotenusa").value);
+            let alturaDoTrianguloRetangulo = parseFloat(document.getElementById("inputAlturaDoTrianguloRetanguloHipotenusa").value);
+
+            let hipotenusaDoTrianguloRetangulo = Math.sqrt((baseDoTrianguloRetangulo) ** 2 + (alturaDoTrianguloRetangulo) ** 2); 
+            
+            document.getElementById("inputResultadoDaHipotenusaDoTrianguloRetangulo").value = hipotenusaDoTrianguloRetangulo;
+        }
+
+        function calculoDiagonalDoQuadrado(){
+            let ladoDoQuadrado = parseFloat(document.getElementById("inputLadoDoQuadrado").value);
+
+            let diagonalDoQuadrado = Math.sqrt(((ladoDoQuadrado) ** 2) + ((ladoDoQuadrado) ** 2));
+
+            document.getElementById("inputResultadoDaDiagonalDoQuadrado").value = diagonalDoQuadrado;
+        }
+        
+    </script>
+    <div>
+        <h1>Geometria Plana</h1>
+    </div>
+    <div>
+        <h2>Quadrado</h2>
+        <h3>Área</h3>
+        <input type="text" id="inputBaseDoQuadradoArea" placeholder="Base">
+        <span>x</span>
+        <input type="text" id="inputAlturaDoQuadradoArea" placeholder="Altura">
+        <span>=</span>
+        <input type="text" disabled id="inputResultadoDaAreaDoQuadrado" placeholder="Resultado">
+        <button onclick="calculoAreaDoQuadrado()" class="btnCalcular">Calcular</button>
+    </div>
+    <div>
+        <h3>Preímetro</h3>
+        <input type="text" id="inputPerimetroDoQuadrado" placeholder="Lado do quadrado">
+        <span>=</span>
+        <input type="text" disabled id="inputResultadoDoPerimetroDoQuadrado" placeholder="Resultado">
+        <button onclick="calculoPerimetroDoQuadrado()" class="btnCalcular">Calcular</button>
+    </div>
+    <div>
+        <h3>Diagonal</h3>
+        <input type="text" id="inputLadoDoQuadrado" placeholder="Lado do quadrado">
+        <span>=</span>
+        <input type="text" disabled id="inputResultadoDaDiagonalDoQuadrado" placeholder="Resultado">
+        <button onclick="calculoDiagonalDoQuadrado()" class="btnCalcular">Calcular</button>
+    </div>
+    <div>
+        <h2>Retângulo</h2>
+        <h3>Área</h3>
+        <input type="text" id="inputBaseDoRetanguloArea" placeholder="Base">
+        <span>x</span>
+        <input type="text" id="inputAlturaDoRetanguloArea" placeholder="Altura">
+        <span>=</span>
+        <input type="text" disabled id="inputResultadoDaAreaDoRetangulo" placeholder="Resultado">
+        <button onclick="calculoAreaDoRetangulo()" class="btnCalcular">Calcular</button>
+    </div>
+    <div>
+        <h3>Perímetro</h3>
+        <input type="text" id="inputBaseDoRetanguloPerimetro" placeholder="Base">
+        <span>+</span>
+        <input type="text" id="inputAlturaDoRetanguloPerimetro" placeholder="Altura">
+        <span>=</span>
+        <input type="text" disabled id="inputResultadoDoPerimetroDoRetangulo" placeholder="Resultado">
+        <button onclick="calculoPerimetroDoRetangulo()" class="btnCalcular">Calcular</button>
+    </div>
+    <div>
+        <h2>Círculo</h2>
+        <h3>Raio</h3>
+        <input type="text" id="inputDiametroDoCirculo" placeholder="Diâmetro">
+        <span>=</span>
+        <input type="text" disabled id="inputResultadoDoRaioDoDiametro" placeholder="Resultado">
+        <button onclick="calculoRaioDoCirculo()" class="btnCalcular">Calcular</button>
+    </div>
+    <div>
+        <h3>Área</h3>
+        <input type="text" id="inputRaioDoCirculoArea" placeholder="Raio">
+        <span>=</span>
+        <input type="text" disabled id="inputResultadoDaAreaDoCirculo" placeholder="Resultado">
+        <button onclick="calculoAreaDoCirculo()" class="btnCalcular">Calcular</button>
+    </div>
+    <div>
+        <h3>Perímetro</h3>
+        <input type="text" id="inputRaioDoCirculoPerimetro" placeholder="Raio">
+        <span>=</span>
+        <input type="text" disabled id="inputResultadoDoPerimetroDoCirculo" placeholder="Resultado">
+        <button onclick="calculoPerimetroDoCirculo()" class="btnCalcular">Calcular</button>
+    </div>
+    <div>
+        <h2>Triângulo Retângulo</h2>
+        <h3>Área</h3>
+        <input type="text" id="inputBaseDoTrianguloRetanguloArea" placeholder="Base">
+        <span>x</span>
+        <input type="text" id="inputAlturaDoTrianguloRetanguloArea" placeholder="Altura">
+        <span>=</span>
+        <input type="text" disabled id="inputResultadoDaAreaDoTrianguloRetangulo" placeholder="Resultado">
+        <button onclick="calculoAreaDoTrianguloRetangulo()" class="btnCalcular">Calcular</button>
+    </div>
+    <div>
+        <h3>Hipotenusa</h3>
+        <input type="text" id="inputBaseDoTrianguloRetanguloHipotenusa" placeholder="Base">
+        <span>+</span>
+        <input type="text" id="inputAlturaDoTrianguloRetanguloHipotenusa" placeholder="Altura">
+        <span>=</span>
+        <input type="text" disabled id="inputResultadoDaHipotenusaDoTrianguloRetangulo" placeholder="Resultado">
+        <button onclick="calculoHipotenusaDoTrianguloRetangulo()" class="btnCalcular">Calcular</button>
+    </div>
+</body>
+</html>
