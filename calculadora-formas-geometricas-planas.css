@@ -19,18 +19,21 @@ h3{
 
 span{
     color: rgb(196, 194, 194);
+    font-size: x-large;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 input{
+    background-color: transparent;
     border-radius: 8px;
     border: 2px solid rgb(5, 118, 231);
-    padding: 15px;
-    font-size: large;
-    background-color: rgb(29, 28, 28);
+    box-sizing: border-box;
     color: rgb(196, 194, 194);
+    font-size: large;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     outline: 0;
+    padding: 15px 8px;
+    width: 180px;
 }
 
 input:focus{
@@ -39,9 +42,11 @@ input:focus{
 
 .btnCalcular{
     background-color: rgb(19, 98, 177);
-    padding: 8px;
     border: none;
     border-radius: 8px;
     font-size: medium;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 18px;
+    margin-left: 20px;
+    padding: 18px;
 }
