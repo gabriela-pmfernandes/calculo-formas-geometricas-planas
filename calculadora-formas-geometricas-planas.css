@@ -30,6 +30,11 @@ input{
     background-color: rgb(29, 28, 28);
     color: rgb(196, 194, 194);
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    outline: 0;
+}
+
+input:focus{
+    border: 2px solid rgb(68, 161, 253);
 }
 
 .btnCalcular{
